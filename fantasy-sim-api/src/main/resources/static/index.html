@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="카드로 선택하고, 세계가 기억하는 AI 판타지 RPG. 아르데르: 잿빛 서약.">
+  <title>아르데르 · 잿빛 서약</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <main id="landing" class="landing" aria-label="새 캠페인 시작">
+    <div class="landing-glow glow-one" aria-hidden="true"></div>
+    <div class="landing-glow glow-two" aria-hidden="true"></div>
+    <img class="landing-character" src="/assets/sera-portrait.svg" alt="" aria-hidden="true">
+    <section class="hero-copy">
+      <div class="eyebrow"><span></span> ARDER CHRONICLES</div>
+      <h1>아르데르</h1>
+      <p class="hero-subtitle">잿빛 서약</p>
+      <p class="hero-description">
+        대화는 이야기처럼, 선택은 게임처럼.<br>
+        당신이 남긴 약속과 비밀을 세계가 기억합니다.
+      </p>
+      <div class="hero-features" aria-label="게임 특징">
+        <div><b>01</b><span>상태에 따라 달라지는 선택 카드</span></div>
+        <div><b>02</b><span>인물별 신뢰·호감·경계</span></div>
+        <div><b>03</b><span>기억을 회상하는 AI 내러티브 디렉터</span></div>
+      </div>
+    </section>
+
+    <section class="start-panel" aria-labelledby="start-title">
+      <div class="crest" aria-hidden="true">
+        <svg class="ui-icon"><use href="/assets/icons.svg#sun"></use></svg>
+      </div>
+      <p class="panel-kicker">새로운 기록</p>
+      <h2 id="start-title">당신의 이름을 남겨주세요</h2>
+      <form id="start-form">
+        <label class="field-label" for="player-name">이름</label>
+        <input id="player-name" name="playerName" type="text" maxlength="30"
+               autocomplete="nickname" placeholder="아르데르에서 불릴 이름" required>
+
+        <fieldset class="race-fieldset">
+          <legend>종족</legend>
+          <div class="race-grid" id="race-grid">
+            <button type="button" class="race-card selected" data-race="human" aria-pressed="true">
+              <svg class="race-glyph" aria-hidden="true"><use href="/assets/icons.svg#human"></use></svg><b>인간</b><small>기록 해독</small>
+            </button>
+            <button type="button" class="race-card" data-race="elf" aria-pressed="false">
+              <svg class="race-glyph" aria-hidden="true"><use href="/assets/icons.svg#leaf"></use></svg><b>엘프</b><small>마력 감지</small>
+            </button>
+            <button type="button" class="race-card" data-race="beast" aria-pressed="false">
+              <svg class="race-glyph" aria-hidden="true"><use href="/assets/icons.svg#claw"></use></svg><b>수인</b><small>예민한 감각</small>
+            </button>
+            <button type="button" class="race-card" data-race="dwarf" aria-pressed="false">
+              <svg class="race-glyph" aria-hidden="true"><use href="/assets/icons.svg#hammer"></use></svg><b>드워프</b><small>구조 분석</small>
+            </button>
+          </div>
+        </fieldset>
+
+        <button id="start-button" class="primary-button" type="submit">
+          <span>이야기 시작</span><i>→</i>
+        </button>
+        <button id="resume-button" class="resume-button hidden" type="button">
+          <span>마지막 기록 이어하기</span><small id="resume-label"></small>
+        </button>
+      </form>
+      <p class="save-note">진행 상황은 이 브라우저에 연결되어 자동 저장됩니다.</p>
+    </section>
+  </main>
+
+  <main id="game" class="game hidden" aria-label="캠페인 플레이">
+    <header class="game-header">
+      <div class="brand-mini">
+        <div class="mini-crest" aria-hidden="true">
+          <svg class="ui-icon"><use href="/assets/icons.svg#sun"></use></svg>
+        </div>
+        <div><h1>아르데르</h1><span>잿빛 서약</span></div>
+      </div>
+      <div class="location-strip">
+        <span id="chapter-label">제1장</span>
+        <b id="location-label">솔라니아 제국</b>
+        <small id="time-label">제1일 18:10</small>
+      </div>
+      <div class="header-actions">
+        <button class="icon-button mobile-only" data-drawer="status" aria-label="상태 보기"
+                aria-controls="status-panel" aria-expanded="false">상태</button>
+        <button class="icon-button mobile-only" data-drawer="journal" aria-label="기록 보기"
+                aria-controls="journal-panel" aria-expanded="false">기록</button>
+        <button id="new-story-button" class="icon-button" aria-label="새 이야기 시작">새 기록</button>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <aside id="status-panel" class="side-panel status-panel" aria-label="인물과 상태" tabindex="0">
+        <div class="companion-card">
+          <div class="portrait-wrap">
+            <img src="/assets/sera-portrait.svg" alt="" aria-hidden="true">
+            <div class="portrait-mark">S</div>
+            <span id="companion-mood" class="mood-chip">경계</span>
+          </div>
+          <p class="panel-kicker">동행 인물</p>
+          <h2 id="companion-name">세라 아벨린</h2>
+          <p id="companion-role">태양교단 조사관</p>
+          <div id="relation-stage" class="relation-stage">낯선 사이</div>
+        </div>
+
+        <section class="panel-section relation-section">
+          <div class="section-heading"><h3>관계</h3><span>기억에 따라 변화</span></div>
+          <div class="meter-row"><label>신뢰</label><div class="meter"><i id="trust-bar"></i></div><b id="trust-value">0</b></div>
+          <div class="meter-row"><label>호감</label><div class="meter warm"><i id="affinity-bar"></i></div><b id="affinity-value">0</b></div>
+          <div class="meter-row"><label>경계</label><div class="meter danger"><i id="guard-bar"></i></div><b id="guard-value">0</b></div>
+          <p id="relationship-caption" class="relationship-caption">세라는 아직 당신을 조심스럽게 살피고 있다.</p>
+        </section>
+
+        <section class="panel-section player-section">
+          <div class="section-heading"><h3 id="player-card-name">여행자</h3><span id="player-meta">인간 · 평민</span></div>
+          <div class="stat-grid">
+            <div><span>체력</span><b id="hp-value">100</b><small>/100</small></div>
+            <div><span>강함</span><b id="power-value">18</b></div>
+            <div><span>통찰</span><b id="insight-value">0</b></div>
+            <div><span>골드</span><b id="gold-value">60</b></div>
+          </div>
+        </section>
+
+        <section class="panel-section world-section">
+          <div class="section-heading"><h3>세계의 흐름</h3><span>0—100</span></div>
+          <div class="world-stat"><span>제국 안정</span><b id="empire-value">44</b></div>
+          <div class="world-stat"><span>마계 영향</span><b id="demon-value">58</b></div>
+          <div class="world-stat"><span>민심</span><b id="mood-value">40</b></div>
+        </section>
+      </aside>
+
+      <section class="story-stage" aria-label="이야기">
+        <div class="scene-banner">
+          <div>
+            <span id="weather-label">늦은 비</span>
+            <h2 id="scene-title">비 내리는 성문</h2>
+          </div>
+          <p id="objective-label">수상한 수레를 확인한다</p>
+        </div>
+
+        <section id="character-stage" class="character-stage" aria-label="현재 동행 인물">
+          <div class="stage-ornament" aria-hidden="true"></div>
+          <div class="stage-copy">
+            <div class="stage-kicker">
+              <svg class="ui-icon" aria-hidden="true"><use href="/assets/icons.svg#sun"></use></svg>
+              <span>현재 동행</span>
+            </div>
+            <h3 id="stage-companion-name">세라 아벨린</h3>
+            <p id="stage-companion-role" class="stage-role">태양교단 조사관</p>
+            <blockquote id="stage-dialogue">당신의 다음 대답을 기다리고 있다.</blockquote>
+            <div class="stage-state" aria-label="세라의 현재 상태">
+              <span id="stage-mood">경계</span>
+              <span id="stage-relation">낯선 사이</span>
+              <small id="stage-memory-hint">아직 공유된 기억이 없다</small>
+            </div>
+          </div>
+          <div class="stage-art" aria-hidden="true">
+            <div class="stage-halo"></div>
+            <img src="/assets/sera-portrait.svg" alt="">
+          </div>
+        </section>
+
+        <div id="chat-log" class="chat-log" aria-label="최근 이야기" aria-live="polite" tabindex="0"></div>
+
+        <div class="choice-dock">
+          <div class="choice-heading">
+            <span>당신의 선택</span>
+            <small>선택은 되돌릴 수 없으며 자동 저장됩니다</small>
+          </div>
+          <div id="choice-list" class="choice-list"></div>
+        </div>
+      </section>
+
+      <aside id="journal-panel" class="side-panel journal-panel" aria-label="목표와 기억" tabindex="0">
+        <section class="panel-section objective-card">
+          <p class="panel-kicker">현재 목표</p>
+          <h2 id="objective-card-text">수상한 수레를 확인한다</h2>
+          <div class="objective-location">
+            <svg class="ui-icon" aria-hidden="true"><use href="/assets/icons.svg#pin"></use></svg>
+            <b id="objective-location">솔라니아 제국 서문</b>
+          </div>
+        </section>
+
+        <section class="panel-section recap-card">
+          <div class="section-heading"><h3>지난 이야기</h3><span id="turn-label">0번째 선택</span></div>
+          <p id="recap-text">솔라니아 제국 서문에서 세라를 만났다.</p>
+        </section>
+
+        <section id="director-card" class="panel-section director-card" aria-labelledby="director-title">
+          <div class="section-heading">
+            <h3 id="director-title">내러티브 디렉터</h3>
+            <span id="director-status" data-mode="RULE_FALLBACK">규칙 대체</span>
+          </div>
+          <p id="director-intent" class="director-intent">현재 장면의 목표와 관계 상태를 분석합니다.</p>
+          <div class="director-evidence" aria-label="디렉터 판단 근거">
+            <span><b id="director-memory-count">0</b>개 기억 회상</span>
+            <span><b id="director-constraint-count">4</b>개 제약 적용</span>
+          </div>
+          <p id="director-reason" class="director-reason">열린 카드만 주목하며 게임 규칙은 변경하지 않습니다.</p>
+          <small id="director-model">AI API 미연결</small>
+        </section>
+
+        <section class="panel-section memory-card">
+          <div class="section-heading"><h3>중요한 기억</h3><span id="memory-count">0</span></div>
+          <div id="memory-list" class="memory-list" aria-label="중요한 기억 목록" tabindex="0"></div>
+        </section>
+
+        <section class="panel-section inventory-card">
+          <div class="section-heading"><h3>소지품</h3><span id="alignment-label">성향 · 미정</span></div>
+          <div id="inventory-list" class="inventory-list"></div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <button id="drawer-backdrop" class="drawer-backdrop hidden" type="button" aria-label="패널 닫기"></button>
+  <div id="loading" class="loading-layer hidden" aria-live="assertive" aria-busy="true">
+    <div class="loading-sigil" aria-hidden="true">
+      <svg class="ui-icon"><use href="/assets/icons.svg#sun"></use></svg>
+    </div>
+    <p>세계가 당신의 선택을 기록하고 있습니다</p>
+    <span></span>
+  </div>
+  <div id="toast" class="toast hidden" role="status"></div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

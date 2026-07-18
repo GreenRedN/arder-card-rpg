@@ -1,0 +1,21 @@
+{
+  "cycleLengthDays": 0,
+  "summaryEveryDays": 7,
+  "choiceChance": 0.4,
+  "majorChance": 0.12,
+  "autoChance": 0.48,
+  "seed": 20260205,
+  "aiCacheBatchSize": 10,
+  "majorThresholds": {
+    "demonGte": 85,
+    "cultLte": 15,
+    "publicMoodLte": 20,
+    "empireLte": 20
+  },
+  "startingWorld": {
+    "empire": 44,
+    "demon": 58,
+    "cult": 33,
+    "publicMood": 40
+  }
+}

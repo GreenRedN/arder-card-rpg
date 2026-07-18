@@ -1,0 +1,1018 @@
+{
+  "version": "2.1.0-lore",
+  "turnTypeMultipliers": {
+    "AUTO": 0.35,
+    "CHOICE": 1.0,
+    "MAJOR": 1.35,
+    "SUMMARY": 0.0
+  },
+  "difficultyScale": {
+    "min": 0.65,
+    "max": 1.45
+  },
+  "rules": [
+    {
+      "name": "base/monster/good",
+      "when": {
+        "threat": "monster",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dHp": -6,
+        "dPublicMood": 3,
+        "dDemon": -1,
+        "dPower": 2,
+        "dGold": 8,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "base/monster/neutral",
+      "when": {
+        "threat": "monster",
+        "choiceId": "NEUTRAL"
+      },
+      "effect": {
+        "dHp": -3,
+        "dPublicMood": 1,
+        "dPower": 1,
+        "dGold": 5
+      }
+    },
+    {
+      "name": "base/monster/evil",
+      "when": {
+        "threat": "monster",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dHp": -2,
+        "dPublicMood": -2,
+        "dDemon": 2,
+        "dGold": 18,
+        "dPower": 2,
+        "dCult": -1,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "base/bandit/good",
+      "when": {
+        "threat": "bandit",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dGold": 10,
+        "dPublicMood": 3,
+        "dEmpire": 1,
+        "dHp": -2
+      }
+    },
+    {
+      "name": "base/bandit/neutral",
+      "when": {
+        "threat": "bandit",
+        "choiceId": "NEUTRAL"
+      },
+      "effect": {
+        "dGold": 15,
+        "dPublicMood": 0,
+        "dHp": -1
+      }
+    },
+    {
+      "name": "base/bandit/evil",
+      "when": {
+        "threat": "bandit",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dGold": 30,
+        "dPublicMood": -4,
+        "dEmpire": -2,
+        "dCult": -1
+      }
+    },
+    {
+      "name": "base/demon/good",
+      "when": {
+        "threat": "demon",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dHp": -8,
+        "dDemon": -4,
+        "dCult": 2,
+        "dPower": 2,
+        "dMetaPower": 1,
+        "dInsightDemon": 2,
+        "dHardship": 2
+      }
+    },
+    {
+      "name": "base/demon/neutral",
+      "when": {
+        "threat": "demon",
+        "choiceId": "NEUTRAL"
+      },
+      "effect": {
+        "dHp": -5,
+        "dDemon": -1,
+        "dPower": 3,
+        "dInsightDemon": 1,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "base/demon/evil",
+      "when": {
+        "threat": "demon",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dHp": -3,
+        "dDemon": 4,
+        "dCult": -2,
+        "dPower": 5,
+        "dMetaPower": 2,
+        "dInsightDemon": 2,
+        "dHardship": 2
+      }
+    },
+    {
+      "name": "base/war/good",
+      "when": {
+        "threat": "war",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dHp": -6,
+        "dEmpire": 2,
+        "dPublicMood": 2,
+        "dGold": -10,
+        "dPower": 2,
+        "dInsightEmpire": 2,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "base/war/neutral",
+      "when": {
+        "threat": "war",
+        "choiceId": "NEUTRAL"
+      },
+      "effect": {
+        "dHp": -4,
+        "dPublicMood": -1,
+        "dGold": -5,
+        "dPower": 2,
+        "dInsightEmpire": 1,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "base/war/evil",
+      "when": {
+        "threat": "war",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dHp": -2,
+        "dEmpire": -2,
+        "dPublicMood": -3,
+        "dGold": 20,
+        "dPower": 3,
+        "dInsightEmpire": 2,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "base/politics/good",
+      "when": {
+        "threat": "politics",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dEmpire": 3,
+        "dPublicMood": 2,
+        "dGold": -8,
+        "dInsightEmpire": 2
+      }
+    },
+    {
+      "name": "base/politics/neutral",
+      "when": {
+        "threat": "politics",
+        "choiceId": "NEUTRAL"
+      },
+      "effect": {
+        "dEmpire": 1,
+        "dGold": 2,
+        "dInsightEmpire": 1
+      }
+    },
+    {
+      "name": "base/politics/evil",
+      "when": {
+        "threat": "politics",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dEmpire": -3,
+        "dPublicMood": -3,
+        "dGold": 20,
+        "dInsightEmpire": 2,
+        "dCult": -1
+      }
+    },
+    {
+      "name": "base/faith/good",
+      "when": {
+        "threat": "faith",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dCult": 4,
+        "dPublicMood": 2,
+        "dGold": -6,
+        "dInsightCult": 2
+      }
+    },
+    {
+      "name": "base/faith/neutral",
+      "when": {
+        "threat": "faith",
+        "choiceId": "NEUTRAL"
+      },
+      "effect": {
+        "dCult": 1,
+        "dGold": -2,
+        "dInsightCult": 1
+      }
+    },
+    {
+      "name": "base/faith/evil",
+      "when": {
+        "threat": "faith",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dCult": -3,
+        "dPublicMood": -2,
+        "dDemon": 2,
+        "dGold": 12,
+        "dInsightCult": 2
+      }
+    },
+    {
+      "name": "base/ruins/good",
+      "when": {
+        "threat": "ruins",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dPower": 3,
+        "dGold": 5,
+        "dDemon": -1,
+        "dInsightDemon": 1
+      }
+    },
+    {
+      "name": "base/ruins/neutral",
+      "when": {
+        "threat": "ruins",
+        "choiceId": "NEUTRAL"
+      },
+      "effect": {
+        "dPower": 4,
+        "dGold": 10,
+        "dDemon": 1,
+        "dInsightDemon": 1
+      }
+    },
+    {
+      "name": "base/ruins/evil",
+      "when": {
+        "threat": "ruins",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dPower": 6,
+        "dGold": 18,
+        "dDemon": 3,
+        "dCult": -1,
+        "dMetaPower": 1,
+        "dInsightDemon": 2,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "auto/monster",
+      "when": {
+        "turnType": "AUTO",
+        "threat": "monster"
+      },
+      "effect": {
+        "dHp": -1,
+        "dPublicMood": -1,
+        "dDemon": 1
+      }
+    },
+    {
+      "name": "auto/bandit",
+      "when": {
+        "turnType": "AUTO",
+        "threat": "bandit"
+      },
+      "effect": {
+        "dHp": -1,
+        "dPublicMood": -1,
+        "dEmpire": -1,
+        "dGold": -2
+      }
+    },
+    {
+      "name": "auto/demon",
+      "when": {
+        "turnType": "AUTO",
+        "threat": "demon"
+      },
+      "effect": {
+        "dHp": -1,
+        "dDemon": 2,
+        "dCult": -1,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "auto/war",
+      "when": {
+        "turnType": "AUTO",
+        "threat": "war"
+      },
+      "effect": {
+        "dPublicMood": -1,
+        "dEmpire": -1
+      }
+    },
+    {
+      "name": "auto/politics",
+      "when": {
+        "turnType": "AUTO",
+        "threat": "politics"
+      },
+      "effect": {
+        "dEmpire": -1
+      }
+    },
+    {
+      "name": "auto/faith",
+      "when": {
+        "turnType": "AUTO",
+        "threat": "faith"
+      },
+      "effect": {
+        "dCult": 1,
+        "dPublicMood": 1,
+        "dGold": -1
+      }
+    },
+    {
+      "name": "auto/ruins",
+      "when": {
+        "turnType": "AUTO",
+        "threat": "ruins"
+      },
+      "effect": {
+        "dDemon": 1,
+        "dPower": 1
+      }
+    },
+    {
+      "name": "major/extra",
+      "when": {
+        "turnType": "MAJOR"
+      },
+      "effect": {
+        "dHardship": 2,
+        "dMetaPower": 1,
+        "dPower": 1
+      }
+    },
+    {
+      "name": "choice/extra",
+      "when": {
+        "turnType": "CHOICE"
+      },
+      "effect": {
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "region/north",
+      "when": {
+        "region": "north"
+      },
+      "effect": {
+        "dHp": -2,
+        "dPower": 1,
+        "dGold": -4,
+        "dInsightDemon": 1
+      }
+    },
+    {
+      "name": "region/central",
+      "when": {
+        "region": "central"
+      },
+      "effect": {
+        "dEmpire": 1,
+        "dCult": 1,
+        "dInsightEmpire": 1
+      }
+    },
+    {
+      "name": "region/west",
+      "when": {
+        "region": "west"
+      },
+      "effect": {
+        "dGold": 5,
+        "dPublicMood": -1
+      }
+    },
+    {
+      "name": "region/east",
+      "when": {
+        "region": "east"
+      },
+      "effect": {
+        "dPublicMood": 1,
+        "dPower": 1
+      }
+    },
+    {
+      "name": "region/south",
+      "when": {
+        "region": "south"
+      },
+      "effect": {
+        "dGold": 3,
+        "dInsightEmpire": 1,
+        "dPublicMood": -1
+      }
+    },
+    {
+      "name": "theme/survival",
+      "when": {
+        "theme": "survival"
+      },
+      "effect": {
+        "dHp": -2,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "theme/famine",
+      "when": {
+        "theme": "famine"
+      },
+      "effect": {
+        "dPublicMood": -2,
+        "dGold": -5,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "theme/order",
+      "when": {
+        "theme": "order"
+      },
+      "effect": {
+        "dEmpire": 2,
+        "dPublicMood": 1
+      }
+    },
+    {
+      "name": "theme/flow",
+      "when": {
+        "theme": "flow"
+      },
+      "effect": {
+        "dPublicMood": 1,
+        "dGold": 3
+      }
+    },
+    {
+      "name": "theme/life",
+      "when": {
+        "theme": "life"
+      },
+      "effect": {
+        "dHp": 2,
+        "dCult": 1
+      }
+    },
+    {
+      "name": "theme/wealth",
+      "when": {
+        "theme": "wealth"
+      },
+      "effect": {
+        "dGold": 8,
+        "dPublicMood": 1
+      }
+    },
+    {
+      "name": "theme/end",
+      "when": {
+        "theme": "end"
+      },
+      "effect": {
+        "dDemon": 2,
+        "dCult": -1,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "theme/decay",
+      "when": {
+        "theme": "decay"
+      },
+      "effect": {
+        "dDemon": 1,
+        "dEmpire": -1,
+        "dPublicMood": -1,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "job/knight",
+      "when": {
+        "job": "knight"
+      },
+      "effect": {
+        "dHp": 1,
+        "dPower": 1
+      }
+    },
+    {
+      "name": "job/mage",
+      "when": {
+        "job": "mage"
+      },
+      "effect": {
+        "dPower": 1,
+        "dInsightDemon": 1
+      }
+    },
+    {
+      "name": "job/priest",
+      "when": {
+        "job": "priest"
+      },
+      "effect": {
+        "dCult": 1,
+        "dInsightCult": 1
+      }
+    },
+    {
+      "name": "job/adventurer",
+      "when": {
+        "job": "adventurer"
+      },
+      "effect": {
+        "dGold": 2
+      }
+    },
+    {
+      "name": "job/knight/war",
+      "when": {
+        "job": "knight",
+        "threat": "war"
+      },
+      "effect": {
+        "dHp": 2,
+        "dPower": 1,
+        "dInsightEmpire": 1
+      }
+    },
+    {
+      "name": "job/knight/monster",
+      "when": {
+        "job": "knight",
+        "threat": "monster"
+      },
+      "effect": {
+        "dHp": 2,
+        "dPower": 1
+      }
+    },
+    {
+      "name": "job/mage/ruins",
+      "when": {
+        "job": "mage",
+        "threat": "ruins"
+      },
+      "effect": {
+        "dPower": 2,
+        "dInsightDemon": 1
+      }
+    },
+    {
+      "name": "job/mage/demon",
+      "when": {
+        "job": "mage",
+        "threat": "demon"
+      },
+      "effect": {
+        "dPower": 1,
+        "dMetaPower": 1,
+        "dInsightDemon": 1
+      }
+    },
+    {
+      "name": "job/priest/faith",
+      "when": {
+        "job": "priest",
+        "threat": "faith"
+      },
+      "effect": {
+        "dCult": 2,
+        "dPublicMood": 1
+      }
+    },
+    {
+      "name": "job/priest/demon/good",
+      "when": {
+        "job": "priest",
+        "threat": "demon",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dDemon": -1,
+        "dCult": 1,
+        "dInsightCult": 1
+      }
+    },
+    {
+      "name": "job/priest/demon/evil",
+      "when": {
+        "job": "priest",
+        "threat": "demon",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dDemon": 2,
+        "dCult": -2,
+        "dMetaPower": 1
+      }
+    },
+    {
+      "name": "origin/noble/politics",
+      "when": {
+        "origin": "noble",
+        "threat": "politics"
+      },
+      "effect": {
+        "dEmpire": 1,
+        "dGold": 2
+      }
+    },
+    {
+      "name": "origin/royal/politics",
+      "when": {
+        "origin": "royal",
+        "threat": "politics"
+      },
+      "effect": {
+        "dEmpire": 2,
+        "dGold": 3,
+        "dPublicMood": 1
+      }
+    },
+    {
+      "name": "origin/nameless/meta",
+      "when": {
+        "origin": "nameless"
+      },
+      "effect": {
+        "dInsightDemon": 1,
+        "dMetaPower": 1
+      }
+    },
+    {
+      "name": "race/elf/flow",
+      "when": {
+        "race": "elf",
+        "theme": "flow"
+      },
+      "effect": {
+        "dPublicMood": 1,
+        "dGold": 2
+      }
+    },
+    {
+      "name": "race/dwarf/wealth",
+      "when": {
+        "race": "dwarf",
+        "theme": "wealth"
+      },
+      "effect": {
+        "dGold": 5,
+        "dPower": 1
+      }
+    },
+    {
+      "name": "race/beast/survival",
+      "when": {
+        "race": "beast",
+        "theme": "survival"
+      },
+      "effect": {
+        "dHp": 2
+      }
+    },
+    {
+      "name": "race/human/order",
+      "when": {
+        "race": "human",
+        "theme": "order"
+      },
+      "effect": {
+        "dEmpire": 1
+      }
+    },
+    {
+      "name": "world/demonHigh/demon",
+      "when": {
+        "worldDemonHigh": "true",
+        "threat": "demon"
+      },
+      "effect": {
+        "dDemon": 2,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "world/empireLow/politics",
+      "when": {
+        "worldEmpireLow": "true",
+        "threat": "politics"
+      },
+      "effect": {
+        "dEmpire": -1,
+        "dPublicMood": -1
+      }
+    },
+    {
+      "name": "world/moodLow/bandit",
+      "when": {
+        "worldMoodLow": "true",
+        "threat": "bandit"
+      },
+      "effect": {
+        "dPublicMood": -2,
+        "dGold": -2
+      }
+    },
+    {
+      "name": "site/ma_gyeong",
+      "when": {
+        "site": "ma_gyeong"
+      },
+      "effect": {
+        "dHp": -2,
+        "dHardship": 2,
+        "dDemon": 1,
+        "dInsightDemon": 2
+      }
+    },
+    {
+      "name": "site/cathedral",
+      "when": {
+        "site": "cathedral"
+      },
+      "effect": {
+        "dCult": 2,
+        "dInsightCult": 2,
+        "dPublicMood": 1
+      }
+    },
+    {
+      "name": "site/ruins_gate",
+      "when": {
+        "site": "ruins_gate"
+      },
+      "effect": {
+        "dHardship": 1,
+        "dInsightDemon": 1,
+        "dPublicMood": -1
+      }
+    },
+    {
+      "name": "deity/sun/faith",
+      "when": {
+        "threat": "faith",
+        "deity": "sun"
+      },
+      "effect": {
+        "dCult": 2,
+        "dPublicMood": 1
+      }
+    },
+    {
+      "name": "deity/life/faith",
+      "when": {
+        "threat": "faith",
+        "deity": "life"
+      },
+      "effect": {
+        "dHp": 3,
+        "dCult": 1
+      }
+    },
+    {
+      "name": "deity/wealth/faith",
+      "when": {
+        "threat": "faith",
+        "deity": "wealth"
+      },
+      "effect": {
+        "dGold": 10,
+        "dPublicMood": 1
+      }
+    },
+    {
+      "name": "deity/order/faith",
+      "when": {
+        "threat": "faith",
+        "deity": "order"
+      },
+      "effect": {
+        "dEmpire": 2,
+        "dPublicMood": 1
+      }
+    },
+    {
+      "name": "deity/flow/faith",
+      "when": {
+        "threat": "faith",
+        "deity": "flow"
+      },
+      "effect": {
+        "dPublicMood": 2,
+        "dGold": 4
+      }
+    },
+    {
+      "name": "archdemon/moon_king",
+      "when": {
+        "archdemon": "moon_king"
+      },
+      "effect": {
+        "dDemon": 3,
+        "dHardship": 2,
+        "dCult": -1
+      }
+    },
+    {
+      "name": "archdemon/end",
+      "when": {
+        "archdemon": "end"
+      },
+      "effect": {
+        "dDemon": 2,
+        "dHardship": 1,
+        "dPublicMood": -1
+      }
+    },
+    {
+      "name": "archdemon/famine",
+      "when": {
+        "archdemon": "famine"
+      },
+      "effect": {
+        "dPublicMood": -2,
+        "dGold": -6,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "archdemon/distortion",
+      "when": {
+        "archdemon": "distortion"
+      },
+      "effect": {
+        "dEmpire": -1,
+        "dPublicMood": -2,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "archdemon/stagnation",
+      "when": {
+        "archdemon": "stagnation"
+      },
+      "effect": {
+        "dEmpire": -2,
+        "dPublicMood": -1,
+        "dHardship": 2
+      }
+    },
+    {
+      "name": "demonTier/high",
+      "when": {
+        "demonTier": "high"
+      },
+      "effect": {
+        "dDemon": 1,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "demonTier/king",
+      "when": {
+        "demonTier": "king"
+      },
+      "effect": {
+        "dDemon": 2,
+        "dHardship": 2
+      }
+    },
+    {
+      "name": "sin/greed/evil",
+      "when": {
+        "sin": "greed",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dGold": 25,
+        "dDemon": 2,
+        "dPublicMood": -2
+      }
+    },
+    {
+      "name": "sin/pride/evil",
+      "when": {
+        "sin": "pride",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dEmpire": -2,
+        "dPublicMood": -1,
+        "dDemon": 1
+      }
+    },
+    {
+      "name": "sin/wrath/evil",
+      "when": {
+        "sin": "wrath",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dHp": -4,
+        "dEmpire": -1,
+        "dDemon": 2,
+        "dHardship": 1
+      }
+    },
+    {
+      "name": "sin/sloth/evil",
+      "when": {
+        "sin": "sloth",
+        "choiceId": "EVIL"
+      },
+      "effect": {
+        "dPower": -1,
+        "dPublicMood": -1,
+        "dDemon": 1,
+        "dHardship": 2
+      }
+    },
+    {
+      "name": "sin/greed/good",
+      "when": {
+        "sin": "greed",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dGold": 5,
+        "dPublicMood": 2,
+        "dCult": 1
+      }
+    },
+    {
+      "name": "sin/wrath/good",
+      "when": {
+        "sin": "wrath",
+        "choiceId": "GOOD"
+      },
+      "effect": {
+        "dHp": -2,
+        "dEmpire": 1,
+        "dPublicMood": 1
+      }
+    }
+  ]
+}

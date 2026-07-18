@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-labelledby="title desc">
+  <title id="title">세라 아벨린</title>
+  <desc id="desc">어두운 조사관 제복과 태양 문장을 지닌 세라의 회화풍 반신 초상</desc>
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#d9b86f" stop-opacity=".24"/>
+      <stop offset=".58" stop-color="#9b7440" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#171512" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6b69a"/>
+      <stop offset=".48" stop-color="#b78970"/>
+      <stop offset="1" stop-color="#715044"/>
+    </linearGradient>
+    <linearGradient id="skinLight" x1="0" y1="0" x2="1" y2=".8">
+      <stop offset="0" stop-color="#ead0b2" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#b77f67" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#28231f"/>
+      <stop offset=".5" stop-color="#171513"/>
+      <stop offset="1" stop-color="#090908"/>
+    </linearGradient>
+    <linearGradient id="cloak" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#33302b"/>
+      <stop offset=".45" stop-color="#1b1a18"/>
+      <stop offset="1" stop-color="#0d0d0c"/>
+    </linearGradient>
+    <linearGradient id="cloakEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#997d4b"/>
+      <stop offset=".45" stop-color="#dbc07c"/>
+      <stop offset="1" stop-color="#695636"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-20%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="378" cy="774" rx="260" ry="82" fill="#050505" opacity=".48" filter="url(#softShadow)"/>
+  <circle cx="365" cy="250" r="225" fill="url(#halo)"/>
+  <circle cx="365" cy="250" r="177" fill="none" stroke="#d7b66d" stroke-opacity=".22" stroke-width="2"/>
+  <circle cx="365" cy="250" r="151" fill="none" stroke="#d7b66d" stroke-opacity=".1"/>
+  <g stroke="#d7b66d" stroke-opacity=".18" stroke-width="2">
+    <path d="M365 50v34M365 416v34M165 250h34M531 250h34M224 109l24 24M482 367l24 24M506 109l-24 24M248 367l-24 24"/>
+  </g>
+
+  <path d="M217 251C192 140 229 51 336 28c111-24 209 43 213 164 3 86-26 169-70 223l-223-1c-36-45-30-98-39-163Z" fill="url(#hair)"/>
+  <path d="M158 900c7-146 38-292 130-353 48-32 94-39 139-31 95 16 154 113 170 384H158Z" fill="url(#cloak)"/>
+  <path d="M212 900c17-139 43-244 95-297 22-22 48-36 78-39 52-5 101 32 131 95 26 55 40 132 47 241H212Z" fill="#141413" opacity=".72"/>
+  <path d="M279 486c12-55 19-104 13-153h152c-4 55 6 107 27 159-55 43-133 47-192-6Z" fill="url(#skin)"/>
+  <path d="M292 366c18 30 46 47 80 49 31 2 57-12 76-36-2 22 1 50 8 81-48 31-111 30-164-5 5-29 6-59 0-89Z" fill="#745043" opacity=".55"/>
+
+  <path d="M257 139c25-65 109-94 176-52 64 41 74 135 43 220-25 70-65 112-113 112-51 0-97-49-119-126-17-59-9-111 13-154Z" fill="url(#skin)"/>
+  <path d="M262 144c25-51 80-72 129-64-53 23-75 65-82 126-9 80 8 142 54 211-52 0-98-49-120-124-17-58-6-112 19-149Z" fill="url(#skinLight)" opacity=".42"/>
+  <path d="M247 132C272 47 367 31 438 72c41 24 67 64 70 118-37-43-68-72-107-88-31 52-82 82-158 89-6-24-4-43 4-59Z" fill="url(#hair)"/>
+  <path d="M422 93c74 39 102 107 83 199-9 46-30 91-62 129 15-64 6-126-15-181-13-34-18-81-6-147Z" fill="#11100f"/>
+  <path d="M272 115c-41 54-45 119-28 194 9 40 25 77 48 109-55-28-84-91-86-158-2-61 18-112 66-145Z" fill="#181614"/>
+
+  <path d="M278 232c22-15 46-15 68-2" fill="none" stroke="#4b342f" stroke-width="8" stroke-linecap="round" opacity=".86"/>
+  <path d="M388 228c20-11 42-9 62 5" fill="none" stroke="#4b342f" stroke-width="8" stroke-linecap="round" opacity=".82"/>
+  <path d="M286 251c14-15 39-15 54 0-15 12-40 12-54 0ZM395 250c13-14 37-13 50 1-14 11-37 11-50-1Z" fill="#e2c4aa" stroke="#3a2d2a" stroke-width="4" stroke-linejoin="round"/>
+  <ellipse cx="315" cy="251" rx="7" ry="9" fill="#8f805f"/>
+  <ellipse cx="422" cy="251" rx="7" ry="9" fill="#8f805f"/>
+  <circle cx="315" cy="252" r="3.5" fill="#1c1917"/>
+  <circle cx="422" cy="252" r="3.5" fill="#1c1917"/>
+  <circle cx="313" cy="249" r="1.2" fill="#ead7b4"/>
+  <circle cx="420" cy="249" r="1.2" fill="#ead7b4"/>
+  <path d="M368 249c-4 26-9 48-20 66 12 8 27 8 40 1" fill="none" stroke="#805a4d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M328 350c24 13 52 14 78 0" fill="none" stroke="#6d413d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M332 352c23 6 46 6 70 0" fill="none" stroke="#d3a08e" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+  <path d="M458 273c12 20 10 39-4 56" fill="none" stroke="#e1b497" stroke-width="3" stroke-linecap="round" opacity=".34"/>
+
+  <path d="M257 548c39-39 79-59 112-61 40-2 84 19 126 63l-39 87-89-68-76 69-34-90Z" fill="#24221f" stroke="#8b7449" stroke-opacity=".42" stroke-width="3"/>
+  <path d="M291 531 367 569l-76 69-39-82 39-25ZM443 531l-76 38 89 68 36-81-49-25Z" fill="#11110f"/>
+  <path d="M365 570v330" fill="none" stroke="url(#cloakEdge)" stroke-width="4" opacity=".8"/>
+  <path d="M175 900c13-132 43-241 106-310M576 900c-17-143-50-249-113-310" fill="none" stroke="#b29358" stroke-opacity=".25" stroke-width="4"/>
+
+  <g transform="translate(366 653)">
+    <circle r="31" fill="#171612" stroke="#c6a35f" stroke-width="3"/>
+    <circle r="9" fill="none" stroke="#d9bb76" stroke-width="3"/>
+    <g stroke="#d9bb76" stroke-width="3" stroke-linecap="round">
+      <path d="M0-23v7M0 16v7M-23 0h7M16 0h7M-16-16l5 5M11 11l5 5M16-16l-5 5M-11 11l-5 5"/>
+    </g>
+  </g>
+  <path d="M363 686c-42 67-58 137-62 214M369 686c43 67 59 137 63 214" fill="none" stroke="#71603f" stroke-opacity=".55" stroke-width="3"/>
+
+  <path d="M177 897c19-93 66-151 138-178 29 46 29 101 3 178H177Z" fill="#25221e" opacity=".9"/>
+  <path d="M548 897c-17-91-63-149-135-178-30 47-31 102-5 178h140Z" fill="#171614" opacity=".95"/>
+</svg>

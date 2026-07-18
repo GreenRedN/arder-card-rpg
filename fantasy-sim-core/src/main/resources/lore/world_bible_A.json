@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "version": "A-1.0",
+    "namingPlan": "A",
+    "genreConstraints": [
+      "고전 하이판타지 톤 유지",
+      "현대 군대/차원침공/스팀펑크 급변 같은 개연성 붕괴 요소 금지",
+      "설정 외 추가는 기존 권역/세력/신앙/마계 구조의 연장선에서만 허용"
+    ]
+  },
+  "properNouns": {
+    "continent": "아르데르 대륙",
+    "nations": {
+      "empire": "솔라니아 제국",
+      "desert_kingdom": "카라자드 사막왕국",
+      "south_union": "세븐크라운 연합왕국",
+      "south_major": "마레노스 왕국",
+      "elf_kingdom": "실바린 숲령",
+      "none": "백설 변경"
+    },
+    "institutions": {
+      "church": "태양교단",
+      "demon_worshippers": "악마숭배자",
+      "dwarf_guilds": "산맥 광산길드 연합"
+    },
+    "cosmology": {
+      "overgod": "태양신",
+      "demonKing": "달의 악마",
+      "minorGods": {
+        "life": {
+          "name": "생명의 신",
+          "domain": "생명"
+        },
+        "wealth": {
+          "name": "풍요의 신",
+          "domain": "풍요"
+        },
+        "order": {
+          "name": "질서의 신",
+          "domain": "질서"
+        },
+        "flow": {
+          "name": "흐름의 신",
+          "domain": "흐름"
+        }
+      },
+      "archdemons": {
+        "end": {
+          "name": "종언의 악마",
+          "domain": "종언"
+        },
+        "famine": {
+          "name": "고갈의 악마",
+          "domain": "고갈"
+        },
+        "distortion": {
+          "name": "왜곡의 악마",
+          "domain": "왜곡"
+        },
+        "stagnation": {
+          "name": "정체의 악마",
+          "domain": "정체"
+        }
+      },
+      "antiThesisPairs": [
+        {
+          "god": "life",
+          "archdemon": "end"
+        },
+        {
+          "god": "wealth",
+          "archdemon": "famine"
+        },
+        {
+          "god": "order",
+          "archdemon": "distortion"
+        },
+        {
+          "god": "flow",
+          "archdemon": "stagnation"
+        }
+      ],
+      "sins": {
+        "pride": {
+          "name": "루미엘",
+          "domain": "교만"
+        },
+        "greed": {
+          "name": "바르곤",
+          "domain": "탐욕"
+        },
+        "lust": {
+          "name": "세릴",
+          "domain": "색욕"
+        },
+        "envy": {
+          "name": "이르사",
+          "domain": "시기"
+        },
+        "gluttony": {
+          "name": "그라움",
+          "domain": "폭식"
+        },
+        "wrath": {
+          "name": "라카스",
+          "domain": "분노"
+        },
+        "sloth": {
+          "name": "누몰",
+          "domain": "나태"
+        }
+      }
+    },
+    "sites": {
+      "ma_gyeong": "월식 마경",
+      "cathedral": "태양교단 대성당",
+      "ruins_gate": "유적 관문",
+      "adventurer_guild": "모험가 길드",
+      "knight_order": "기사단",
+      "mage_tower": "마탑",
+      "none": ""
+    }
+  },
+  "factions": {
+    "empire": "제국 세력",
+    "neutral": "중립",
+    "church": "교단",
+    "demon_worshippers": "악마숭배자",
+    "beast_anti": "반(反)악마파 수인",
+    "beast_pro": "친(親)악마파 수인",
+    "dwarf_guild": "드워프 길드",
+    "elf_guard": "엘프 국경수비대"
+  },
+  "relations": [
+    {
+      "a": "empire",
+      "b": "desert_kingdom",
+      "type": "border_skirmish",
+      "notes": "사막왕국은 제국 평야를 노리며 국지도발(국경 병력 전진배치/철수) 수준. 제국은 거슬리나 전면전은 신중."
+    },
+    {
+      "a": "empire",
+      "b": "south_union",
+      "type": "intrigue",
+      "notes": "제국은 해안 진출을 원해 직접 정복보다 친제국파 지원/정치모략 선호. 연합은 친제국파 vs 반제국파 당쟁."
+    },
+    {
+      "a": "empire",
+      "b": "south_major",
+      "type": "armed_neutral",
+      "notes": "제국은 남부왕국을 밀 수 있으나 체급 때문에 부담. 대신 남쪽의 약한 연합을 완충지대로 보고 기싸움 최소화(중립)."
+    },
+    {
+      "a": "desert_kingdom",
+      "b": "south_major",
+      "type": "distant_neutral",
+      "notes": "거리상 악감정 없음. 중립."
+    },
+    {
+      "a": "desert_kingdom",
+      "b": "south_union",
+      "type": "counter_intrigue",
+      "notes": "제국이 친제국파를 지원하면 사막왕국은 반제국파를 지원. 정복은 가능하나 제국의 역습 리스크로 신중."
+    },
+    {
+      "a": "south_major",
+      "b": "south_union",
+      "type": "border_sensitive",
+      "notes": "남부왕국은 큰 관심은 없으나 국경이 맞닿아 신경 쓰임. 특산품이 비슷해 교류(무역)는 상대적으로 저조."
+    }
+  ],
+  "trade": {
+    "empire": {
+      "exports": [
+        "밀",
+        "제국제 공산품",
+        "철제 도구"
+      ],
+      "imports": [
+        "보석",
+        "비단",
+        "향신료",
+        "섬 특산품",
+        "해산물"
+      ]
+    },
+    "desert_kingdom": {
+      "exports": [
+        "보석",
+        "비단",
+        "향신료",
+        "향"
+      ],
+      "imports": [
+        "밀",
+        "철제 도구",
+        "직물용 염료"
+      ]
+    },
+    "south_union": {
+      "exports": [
+        "해산물",
+        "소금",
+        "섬 특산품"
+      ],
+      "imports": [
+        "제국 공산품",
+        "향신료",
+        "보석"
+      ]
+    },
+    "south_major": {
+      "exports": [
+        "해산물",
+        "곡물",
+        "항해물자"
+      ],
+      "imports": [
+        "제국 공산품",
+        "향신료"
+      ]
+    },
+    "elf_kingdom": {
+      "exports": [
+        "약초",
+        "수액",
+        "은실"
+      ],
+      "imports": [
+        "정제 금속",
+        "책/지도"
+      ]
+    }
+  },
+  "policies": {
+    "elfEntry": {
+      "closedToCivilians": true,
+      "merchantGate": true,
+      "humanEntry": "허가 받은 인간만",
+      "screening": "까다로운 심사를 통과한 상인만 제한적 입국"
+    },
+    "church": {
+      "activeRegions": [
+        "central",
+        "south",
+        "west"
+      ],
+      "politics": "포교를 위해 왕국들과 척 지는 것을 피하며 중립",
+      "goal": "마왕 제거",
+      "northDispatch": "대륙 북부(설원)로 성기사 대규모 파견은 하지 않음",
+      "targets": [
+        "출몰하는 마물",
+        "하급 악마",
+        "악마숭배자(활동권 내)"
+      ],
+      "attitudes": {
+        "elf": "중립/반감 없음",
+        "beast_pro": "적대",
+        "demons": "적대"
+      }
+    },
+    "north": {
+      "nationConcept": "국가 개념 없음",
+      "dwarves": "각 광산마다 길드가 있는 형식",
+      "beastfolk": "설원 부족 단위 생활"
+    },
+    "demonOps": {
+      "hellSizeFixed": true,
+      "infiltration": "하급 악마/마물이 마경에서 빠져나와 귀족을 유혹(힘/부) → 귀족+악마숭배자 협력",
+      "monstersVsLowDemons": "마물은 지능이 없어 물질적 피해 중심, 하급 악마는 지능이 있어 모략 포함",
+      "commandChain": "상급악마(7죄악) → 중급악마 → 하급악마/마물"
+    },
+    "beastfolk": {
+      "antiDemon": "인간과 활발한 교류, 왕국들과 악감정 적음",
+      "proDemon": "인간에게 피해를 입은 경험으로 힘을 원함. 악마숭배자(인간)와도 서로 껄끄러움(불신)."
+    }
+  }
+}

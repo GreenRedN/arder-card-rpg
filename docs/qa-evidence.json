@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 3,
+  "generatedAt": "2026-07-18T01:16:39Z",
+  "environment": {
+    "java": "17.0.19",
+    "springBoot": "3.3.5",
+    "database": "H2 file database",
+    "browser": "Chromium headless baseline",
+    "containerRuntime": "unavailable",
+    "postgresqlRuntime": "unavailable",
+    "localAiRuntime": "unavailable",
+    "externalAiConfiguration": "not configured"
+  },
+  "automatedTests": {
+    "total": 23,
+    "passed": 23,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "browserFlow": {
+    "scope": "baseline before NAN narrative-director panel",
+    "startRace": "elf",
+    "choicesApplied": 8,
+    "reachedChapter2Hub": true,
+    "secretRouteUnlocked": true,
+    "reloadResumeVerified": true,
+    "hubAtTurn6": {
+      "scene": "다음 걸음",
+      "memoryCount": 6,
+      "trust": 66,
+      "affinity": 34,
+      "guard": 10
+    },
+    "completedAtTurn8": {
+      "scene": "다음 걸음",
+      "memoryCount": 7,
+      "memoryTitles": [
+        "공유된 비밀",
+        "잿빛 서약",
+        "교단 전령 구출",
+        "등을 맡긴 첫 전투",
+        "월식 파편을 맡기다",
+        "왜곡의 흔적",
+        "첫 번째 동행"
+      ]
+    }
+  },
+  "nanDirectorUpdate": {
+    "ruleFallbackTested": true,
+    "mockLiveProviderTested": true,
+    "keylessCompatibleProviderTested": true,
+    "invalidProviderOutputFallbackTested": true,
+    "inventedChoiceRejected": true,
+    "inventedMemoryFiltered": true,
+    "apiTraceTested": true,
+    "staticUiWiringTested": true,
+    "javascriptSyntaxTested": true,
+    "newPanelBrowserVisualTested": false,
+    "visualTestBlocker": "Remote browser denied the local application URL"
+  },
+  "deploymentValidation": {
+    "composeAndDockerfileStaticValidation": true,
+    "hardcodedDatabasePasswordRemoved": true,
+    "envFileIgnoredByGit": true,
+    "productionProfileRejectsMissingDatabase": true,
+    "databaseAwareHealthSuccessTested": true,
+    "databaseAwareHealthFailureTested": true,
+    "packagedJarSmokeTested": true,
+    "packagedJarBytes": 28391815,
+    "packagedJarSha256": "238e294cb87006d221fe73bd7774268196b3305f713552d175593ff099e90a14",
+    "concurrentDuplicateRequestAppliedOnce": true,
+    "jarRestartRecoveryTested": true,
+    "dockerComposeSmokeExecuted": false,
+    "postgresqlIntegrationExecuted": false,
+    "containerBlocker": "No Docker, Podman, OCI runtime socket, or PostgreSQL binaries in the execution environment",
+    "composeSmokeScriptReady": true
+  },
+  "liveAiValidation": {
+    "realProviderExecuted": false,
+    "blocker": "FANTASY_AI and OPENAI environment variables are unset; Ollama and local models are unavailable",
+    "liveSmokeScriptReady": true,
+    "missingConfigurationGateExitCode": 2
+  },
+  "layout": {
+    "desktop1440x1000": {
+      "horizontalOverflowPx": 0,
+      "choiceCount": 5,
+      "visibleChoiceCount": 5,
+      "chatHeightPx": 244,
+      "seraImageLoaded": true
+    },
+    "laptop1366x768": {
+      "horizontalOverflowPx": 0,
+      "choiceCount": 5,
+      "visibleChoiceCount": 5,
+      "chatHeightPx": 151,
+      "seraImageLoaded": true
+    }
+  },
+  "accessibility": {
+    "standard": "WCAG 2 A/AA automated scan",
+    "screensScanned": 4,
+    "violations": 0
+  },
+  "browserErrors": {
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedRequests": 0
+  },
+  "serverRestart": {
+    "verified": true,
+    "turn": 8,
+    "scene": "다음 걸음",
+    "memoryCount": 7,
+    "horizontalOverflowPx": 0,
+    "browserErrors": 0
+  },
+  "notExecuted": [
+    "Docker container startup (environment blocked)",
+    "PostgreSQL container integration (environment blocked)",
+    "Real external AI provider (environment blocked)",
+    "NAN director panel browser visual verification",
+    "Firefox and Safari",
+    "Load and large-scale concurrency",
+    "Public deployment"
+  ]
+}

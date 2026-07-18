@@ -1,0 +1,18 @@
+# Java and Maven build output
+*.class
+*.jar
+*.war
+**/target/
+
+# Local runtime state and secrets
+data/
+.runtime/
+.env
+.env.*
+!env.example
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
